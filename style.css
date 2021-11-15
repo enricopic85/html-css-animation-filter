@@ -82,9 +82,41 @@
 }
 .ex-10-icon {
     font-size: 60px;
+    animation-name: esercizio10;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: linear;
 }
+
+@keyframes esercizio10 {
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
 .ex-11-icon {
     font-size: 60px;
+    
+}
+.ex-11-icon:hover{
+    animation-name: esercizio11;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+}
+@keyframes esercizio11{
+    0%{
+        transform: rotate(0);
+    }
+    90%{
+        transform: rotate(315deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
 }
 .ex-12-button, .ex-13-button {
     position: relative;
@@ -99,6 +131,7 @@
     text-align: center;
     text-decoration: none;
 }
+
 .ex-12-top-white, .ex-13-top-white {
     position: absolute;
     top: -10px;
@@ -116,3 +149,32 @@
     height: 20px;
 }
 
+.ex-12-button:hover .ex-12-top-white{
+    animation: topbutton linear 2s;
+}
+@keyframes topbutton{
+    0%{
+        left: 10%;
+    }
+    50%{
+        left: calc(100% - 60px);
+    }
+    100%{
+        left: 10%;
+    }
+}
+.ex-12-button:hover .ex-12-bottom-white{
+    animation: bottomButton linear 2s;
+}
+
+@keyframes bottomButton{
+    0%{
+        right: 20%;
+    }
+    50%{
+        right: calc(100% - 60px);
+    }
+    100%{
+        right: 20%;
+    }
+}
